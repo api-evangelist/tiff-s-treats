@@ -1,0 +1,68 @@
+generated: '2026-08-05'
+method: probed
+source: https://www.cookiedelivery.com/robots.txt
+host: https://www.cookiedelivery.com
+
+# Tiff's Treats publishes NO /.well-known/ discovery document. The one
+# machine-readable agent-facing policy surface it does publish is a
+# Cloudflare-managed robots.txt carrying Content-Signal directives
+# (AIPREF-adjacent) plus an explicit AI-crawler deny list. Captured
+# verbatim at well-known/tiff-s-treats-robots.txt.
+
+content_signal:
+  file: tiff-s-treats-robots.txt
+  applies_to: '*'
+  managed_by: Cloudflare Managed content
+  signals:
+    search: 'yes'      # may index and return links/short excerpts
+    ai-train: 'no'     # may NOT train or fine-tune models on this content
+    use: reference     # AI systems may consume by reference only
+  rights_reservation: >-
+    Text asserts the restrictions are express reservations of rights under
+    Article 4 of EU Directive 2019/790 (DSM Copyright Directive).
+
+ai_crawlers_disallowed:
+  - Amazonbot
+  - Applebot-Extended
+  - Bytespider
+  - CCBot
+  - ClaudeBot
+  - CloudflareBrowserRenderingCrawler
+  - Google-Extended
+  - GPTBot
+  - meta-externalagent
+
+general_crawlers:
+  user_agent: '*'
+  allow: /
+  disallow:
+    - /CMSDesk/
+    - /OnlineOrdering_Test/
+    - /OnlineOrdering_Test_91/
+    - /OnlineOrderingMaintenance.htm
+    - /HttpNotFoundRedirect.htm
+    - /HttpSSLRedirect.htm
+
+# /.well-known/ probe results. Every path below returned HTTP 200 with the
+# byte-identical 1457-byte single-page-app shell that the site returns for
+# ANY unmatched path (verified against control path
+# /zzz-no-such-path-9f8a7b — same MD5, same length). These are soft-404s,
+# NOT documents. No well-known document exists.
+well_known_probe:
+  soft_404: true
+  soft_404_length: 1457
+  control_path: /zzz-no-such-path-9f8a7b
+  documents:
+    - {path: /.well-known/security.txt, status: 200, result: soft-404}
+    - {path: /.well-known/openid-configuration, status: 200, result: soft-404}
+    - {path: /.well-known/oauth-authorization-server, status: 200, result: soft-404}
+    - {path: /.well-known/api-catalog, status: 200, result: soft-404}
+    - {path: /.well-known/ai-plugin.json, status: 200, result: soft-404}
+    - {path: /.well-known/agent-card.json, status: 200, result: soft-404}
+    - {path: /.well-known/agent.json, status: 200, result: soft-404}
+
+x-evidence:
+  fetched: '2026-08-05'
+  url: https://www.cookiedelivery.com/robots.txt
+  http_status: 200
+  content_type: text/plain; charset=utf-8

@@ -42,5 +42,25 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tiff's Treats is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/tiff-s-treats_stock/
+Tiff's Treats is an Austin, Texas cookie company founded in 1999 by Tiffany Taylor and Leon Chen,
+built around warm, baked-to-order cookies delivered same-day from roughly 90 bakery-storefronts across
+the southern and western United States. It sells through an owned delivery fleet, an online ordering
+platform at cookiedelivery.com, iOS and Android apps, and a corporate gifting / catering / e-gift-card
+business.
+
+## API surface
+
+**None found.** Contract discovery was run against `www.cookiedelivery.com`, `cookiedelivery.com`,
+`api.cookiedelivery.com`, `developer.` / `developers.` / `docs.cookiedelivery.com` and every
+`/.well-known/` path in the pipeline. The website answers **HTTP 200 with a byte-identical 1457-byte
+single-page-app shell for every unmatched path** (verified against a control path), so no `200` from
+that host is evidence of a document. `api.cookiedelivery.com` resolves but returns a bare IIS 404 on
+every probed path. There is no developer portal, no OpenAPI/GraphQL/AsyncAPI contract, no MCP server,
+no A2A agent card, and no first-party SDK in any public package registry.
+
+What the company *does* publish that is machine-readable is a Cloudflare-managed `robots.txt` carrying
+**Content-Signal** directives (`search=yes, ai-train=no, use=reference`) and an explicit deny list for
+nine AI crawlers including ClaudeBot and GPTBot — captured verbatim in `well-known/`.
+
+- Website: https://www.cookiedelivery.com/
+- Secondary-market listing: https://forgeglobal.com/tiff-s-treats_stock/
