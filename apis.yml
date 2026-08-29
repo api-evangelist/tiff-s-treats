@@ -12,6 +12,17 @@ description: 'Tiff''s Treats is an Austin, Texas cookie company founded in 1999 
   Roddick, Brooklyn Decker, Kendra Scott and Dirk Nowitzki among its investors. It is a
   direct-to-consumer food and delivery operator, not a software vendor: it publishes no
   developer portal, no public API, and no machine-readable API contract.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.cookiedelivery.com/CookieDelivery/media/img/logo_header.svg
 url: https://raw.githubusercontent.com/api-evangelist/tiff-s-treats/refs/heads/main/apis.yml
 x-type: company
