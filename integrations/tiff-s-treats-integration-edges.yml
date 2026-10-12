@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/tiff-s-treats/integrations
+- https://n8n.io/integrations/tiff-s-treats/
+- https://composio.dev/toolkits/tiff-s-treats
+- https://monid.ai/tools/tiff-s-treats
+checked:
+- https://composio.dev/toolkits/tiff-s-treats
+- https://monid.ai/tools/tiff-s-treats
+- https://n8n.io/integrations/tiff-s-treats/
+- https://zapier.com/apps/tiff-s-treats/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
