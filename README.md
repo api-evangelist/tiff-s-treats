@@ -64,25 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tiff's Treats is an Austin, Texas cookie company founded in 1999 by Tiffany Taylor and Leon Chen,
-built around warm, baked-to-order cookies delivered same-day from roughly 90 bakery-storefronts across
-the southern and western United States. It sells through an owned delivery fleet, an online ordering
-platform at cookiedelivery.com, iOS and Android apps, and a corporate gifting / catering / e-gift-card
-business.
+Tiff's Treats is an Austin, Texas cookie company founded in 1999 by University of Texas students Tiffany Taylor and Leon Chen, built around warm, baked-to-order cookies delivered same-day. The company operates roughly 90 bakery-storefronts across Texas and the southern and western United States, combining walk-in retail with an owned delivery fleet, an online ordering platform at cookiedelivery.com, and iOS and Android ordering apps. Alongside consumer delivery it runs a substantial corporate gifting, catering, e-gift-card and special-events business, plus an "Elites" subscription membership and a rewards program. Tiff's Treats has raised more than $50 million in outside investment, including a $25 million round led by Morgan Stanley Expansion Capital, and counts Andy Roddick, Brooklyn Decker, Kendra Scott and Dirk Nowitzki among its investors. It is a direct-to-consumer food and delivery operator, not a software vendor: it publishes no developer portal, no public API, and no machine-readable API contract.
 
-## API surface
+**Areas:** Company · Food and Beverage · Restaurant · Delivery · E-Commerce · Retail · Gifting · Consumer · Subscription · Loyalty · Austin · Texas
 
-**None found.** Contract discovery was run against `www.cookiedelivery.com`, `cookiedelivery.com`,
-`api.cookiedelivery.com`, `developer.` / `developers.` / `docs.cookiedelivery.com` and every
-`/.well-known/` path in the pipeline. The website answers **HTTP 200 with a byte-identical 1457-byte
-single-page-app shell for every unmatched path** (verified against a control path), so no `200` from
-that host is evidence of a document. `api.cookiedelivery.com` resolves but returns a bare IIS 404 on
-every probed path. There is no developer portal, no OpenAPI/GraphQL/AsyncAPI contract, no MCP server,
-no A2A agent card, and no first-party SDK in any public package registry.
+## Tiff's Treats on APIs.io
 
-What the company *does* publish that is machine-readable is a Cloudflare-managed `robots.txt` carrying
-**Content-Signal** directives (`search=yes, ai-train=no, use=reference`) and an explicit deny list for
-nine AI crawlers including ClaudeBot and GPTBot — captured verbatim in `well-known/`.
+Everything profiled for Tiff's Treats is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tiff-s-treats/](https://apis.io/providers/tiff-s-treats/)** — or go straight to one of the APIs or properties below.
 
-- Website: https://www.cookiedelivery.com/
-- Secondary-market listing: https://forgeglobal.com/tiff-s-treats_stock/
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Tiff S Treats Domain Security](https://apis.io/security/tiff-s-treats/tiff-s-treats-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.cookiedelivery.com/)
+- [Support](https://www.cookiedelivery.com/company/contact-us.aspx)
+- [Blog](https://www.cookiedelivery.com/blog)
+- [Terms of service](https://www.cookiedelivery.com/footer-nav/terms-of-use.aspx)
+- [Privacy policy](https://www.cookiedelivery.com/footer-nav/privacy-policy.aspx)
+
+## API Evangelist rating
+
+**Kin Score 11.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 2.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | yes |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tiff-s-treats/](https://apis.io/providers/tiff-s-treats/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tiff's Treats: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tiff-s-treats/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
